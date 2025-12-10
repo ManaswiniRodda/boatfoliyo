@@ -1,0 +1,132 @@
+/* style.css - SkillDevelopmentSite */
+
+/* --- Reset & base --- */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; padding:0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color:#222; }
+a { color: inherit; text-decoration:none; }
+
+/* --- Top nav --- */
+.navbar {
+  background: rgba(0, 62, 126, 0.95);
+  color: #fff;
+  padding: 12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.nav-left { display:flex; align-items:center; gap:12px; }
+.brand {
+  font-weight:700;
+  letter-spacing:0.5px;
+  font-size:18px;
+  color:#ffd54f;
+}
+.nav-links { display:flex; gap:14px; align-items:center; }
+.nav-links a { color:#fff; font-weight:600; padding:6px 8px; border-radius:6px; }
+.nav-links a:hover { background: rgba(255,255,255,0.06); }
+
+/* --- Page hero backgrounds set via classes --- */
+.hero {
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 18px;
+  color:#fff;
+}
+.home-bg    { background: url("photo1.jpg") center/cover no-repeat; }
+.about-bg   { background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("photo2_.jpg") center/cover no-repeat; }
+.eligibility-bg { background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("photo6.jpg") center/cover no-repeat; }
+.register-bg{ background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("photo4.avif") center/cover no-repeat; }
+.contact-bg { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("photo5.jpg") center/cover no-repeat; }
+
+.hero .box {
+  background: rgba(0,0,0,0.45);
+  padding: 22px;
+  border-radius:10px;
+  width:100%;
+  max-width:900px;
+}
+.hero h1 { margin:0 0 10px; font-size:30px; color:#ffd54f; }
+.hero p  { margin:0 0 16px; font-size:18px; color:#fff; }
+
+/* --- Content sections for non-hero pages --- */
+.section {
+  padding:40px 18px;
+  display:flex;
+  justify-content:center;
+}
+.container {
+  max-width:1000px;
+  width:100%;
+  background:#fff;
+  padding:22px;
+  border-radius:10px;
+  box-shadow: 0 8px 20px rgba(16,36,66,0.08);
+  color:#222;
+}
+
+/* --- Icon cards (used on About/Eligibility) --- */
+.card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:18px; }
+.card {
+  display:flex; gap:14px; align-items:flex-start;
+  border:1px solid #eee; padding:14px; border-radius:10px;
+  background: linear-gradient(180deg,#ffffff,#fbfdff);
+}
+.icon {
+  min-width:64px; min-height:64px; border-radius:10px; background-size:48px 48px;
+  background-repeat:no-repeat; background-position:center; background-color:#f4f8ff;
+  display:flex; align-items:center; justify-content:center; font-size:22px; color:#003e7e;
+}
+/* icon images are CSS backgrounds */
+.icon.skilling { background-image: url("logo.jpg"); }
+.icon.duplicate { background-image: url("duplicate.png"); }
+.icon.verified { background-image: url("verified.png"); }
+
+/* --- Registration form styles --- */
+.form-grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+.form-row { display:flex; flex-direction:column; }
+label { font-weight:600; margin-bottom:6px; }
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+  padding:10px; border:1px solid #d1d7e0; border-radius:6px; font-size:15px;
+}
+textarea { resize:vertical; min-height:80px; }
+.btn { display:inline-block; padding:10px 16px; background:#ffd54f; color:#000; font-weight:700; border-radius:8px; border:none; cursor:pointer; }
+.btn.secondary { background:#003e7e; color:#fff; }
+
+/* --- Saved list display --- */
+.saved-list { margin-top:18px; border-top:1px dashed #e6e9f0; padding-top:16px; }
+.saved-item { display:flex; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px solid #f1f3f8; align-items:center; }
+.saved-meta { font-size:13px; color:#555; }
+.small { font-size:13px; color:#666; }
+
+/* --- Footer (common) --- */
+.footer {
+  margin-top:30px;
+  background:#032647;
+  color:#fff;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.footer .left { max-width:60%; }
+.social-links { display:flex; gap:10px; align-items:center; }
+.social-links a {
+  width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:8px; background:#fff; color:#032647; font-weight:700;
+  text-decoration:none;
+}
+.footer small { color:#bcd3f0; }
+
+/* --- Responsive tweaks --- */
+@media (max-width:720px){
+  .nav-links { display:none; }
+  .hero h1 { font-size:22px; }
+  .container { padding:16px; }
+  .footer .left { max-width:100%; }
+}

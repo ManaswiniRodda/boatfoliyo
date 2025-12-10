@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Register | Skill Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="register-bg">
+
+  <div class="navbar">
+    <div class="nav-left"><div class="brand">Skill Register (UBID)</div></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Scheme</a>
+      <a href="eligibility.html">Eligibility</a>
+      <a href="register.html">Register</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2>Beneficiary Registration</h2>
+      <p>Fill in details to get a Unique Beneficiary ID (UBID). All data is saved locally in your browser.</p>
+
+      <form id="regForm" class="form-grid" style="margin-top:16px;">
+        <div class="form-row">
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" type="text" placeholder="e.g., Ramesh Kumar" required>
+        </div>
+
+        <div class="form-row">
+          <label for="age">Age *</label>
+          <input id="age" name="age" type="number" min="14" max="100" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="optional">
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone *</label>
+          <input id="phone" name="phone" type="text" placeholder="10 digit mobile" required>
+        </div>
+
+        <div class="form-row">
+          <label for="skillInterest">Skill Interest *</label>
+          <select id="skillInterest" name="skillInterest" required>
+            <option value="">Select</option>
+            <option>Electrician</option>
+            <option>Plumbing</option>
+            <option>Carpentry</option>
+            <option>Tailoring</option>
+            <option>Welding</option>
+            <option>Others</option>
+          </select>
+        </div>
+
+        <div class="form-row" style="grid-column:span 2;">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="Village / City, District, State"></textarea>
+        </div>
+
+        <div style="grid-column:span 2; display:flex; gap:8px; align-items:center; margin-top:6px;">
+          <button class="btn" type="submit">Submit Registration</button>
+          <button class="btn secondary" type="button" id="exportBtn">Export CSV</button>
+          <button class="btn secondary" type="button" id="clearBtn">Clear All</button>
+        </div>
+      </form>
+
+      <div id="savedList" class="saved-list"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="left">
+      <strong>Gujarat Skill Development Mission</strong><br>
+      <small>UBID — local demo (data kept in browser storage)</small>
+    </div>
+    <div class="social-links">
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="Twitter">t</a>
+      <a href="#" title="Email">@</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
